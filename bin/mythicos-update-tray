@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+# MythicOS Update Manager - tray icon launcher
+#
+# Copyright (C) 2026 Studio Hastag <contact@hastag.fr>
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+import os
+import sys
+
+sys.path = [p for p in sys.path if p not in ("", ".")]
+sys.path.insert(0, "/usr/lib/mythicos-update")
+
+if os.getuid() == 0:
+    print("Error: do not run the tray icon as root", file=sys.stderr)
+    sys.exit(1)
+
+from mythicosupdate.tray import main  # noqa: E402
+
+sys.exit(main())

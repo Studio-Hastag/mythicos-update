@@ -1,0 +1,65 @@
+#!/usr/bin/python3
+# MythicOS Update Manager - root helper, started through pkexec.
+#
+# Usage: mythicos-update-helper [--repair-only] [--apt PKG...] [--allow-remove PKG...] [--flatpak]
+#
+# It only upgrades packages that are already installed and have a newer
+# candidate, refuses removals it was not told about, checks the disk space
+# and never accepts options for apt-get/flatpak from its caller.
+#
+# Copyright (C) 2026 Studio Hastag <contact@hastag.fr>
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+import argparse
+import os
+import sys
+
+sys.path = [p for p in sys.path if p not in ("", ".")]
+sys.path.insert(0, "/usr/lib/mythicos-update")
+
+from mythicosupdate import constants, logutil, rootops  # noqa: E402
+
+
+def main():
+    if os.getuid() != 0:
+        print("mythicos-update-helper must be run as root (through pkexec).", file=sys.stderr)
+        return constants.EXIT_NOT_ROOT
+
+    parser = argparse.ArgumentParser(prog="mythicos-update-helper", add_help=False)
+    parser.add_argument("--repair-only", action="store_true")
+    parser.add_argument("--apt", nargs="*", default=[])
+    parser.add_argument("--allow-remove", nargs="*", default=[])
+    parser.add_argument("--flatpak", action="store_true")
+    try:
+        args = parser.parse_args()
+    except SystemExit:
+        return constants.EXIT_BAD_ARGUMENTS
+    if not (args.repair_only or args.apt or args.flatpak):
+        return constants.EXIT_BAD_ARGUMENTS
+
+    apt_ok = False
+    try:
+        rootops.validate_package_names(args.apt + args.allow_remove)
+        rootops.ensure_package_manager_free()
+        rootops.ignore_termination_signals()
+        if args.repair_only:
+            rootops.repair_dpkg()
+        if args.apt:
+            rootops.apt_upgrade(args.apt, args.allow_remove)
+            apt_ok = True
+        if args.flatpak:
+            rootops.flatpak_update()
+    except rootops.OperationError as error:
+        logutil.error("Operation failed: %s %s" % (error.event, error.details))
+        rootops.emit("error", code=error.event, apt_ok=apt_ok, **error.details)
+        return error.code
+    except Exception as error:  # never leave the window waiting for nothing
+        logutil.error("Unexpected error: %r" % (error,))
+        rootops.emit("error", code="unexpected", apt_ok=apt_ok, detail=str(error))
+        return constants.EXIT_FAILED
+    rootops.emit("done")
+    return constants.EXIT_OK
+
+
+if __name__ == "__main__":
+    sys.exit(main())

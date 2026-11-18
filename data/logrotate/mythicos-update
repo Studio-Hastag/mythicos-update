@@ -1,0 +1,8 @@
+/var/log/mythicos-update.log {
+  rotate 12
+  monthly
+  compress
+  missingok
+  notifempty
+  nocreate
+}

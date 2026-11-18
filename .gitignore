@@ -1,0 +1,8 @@
+build/
+__pycache__/
+*.pyc
+debian/mythicos-update/
+debian/.debhelper/
+debian/files
+debian/*.substvars
+debian/*.log

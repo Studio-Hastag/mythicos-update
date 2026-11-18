@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+
+DEB_VERSION := $(shell dpkg-parsechangelog -S Version)
+
+%:
+	dh $@ --with python3
+
+override_dh_auto_build:
+	$(MAKE) all
+
+override_dh_auto_install:
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/mythicos-update
+
+# Inject the version number in the code
+override_dh_installdeb:
+	find debian/mythicos-update -type f -name '*.py' -exec sed -i 's/__DEB_VERSION__/$(DEB_VERSION)/g' {} +
+	find debian/mythicos-update/usr/bin -type f -exec sed -i 's/__DEB_VERSION__/$(DEB_VERSION)/g' {} +
+	dh_installdeb
+
+override_dh_python3:
+	dh_python3 /usr/lib/mythicos-update
+
+# The automatic updates are opt-in: never enable or start the timer on install.
+override_dh_installsystemd:
+	dh_installsystemd --no-enable --no-start
+
+override_dh_auto_clean:
+	$(MAKE) clean

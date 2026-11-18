@@ -1,0 +1,11 @@
+[Unit]
+Description=MythicOS Update Manager automatic updates
+
+[Timer]
+OnCalendar=daily
+OnStartupSec=60m
+RandomizedDelaySec=60m
+Persistent=true
+
+[Install]
+WantedBy=timers.target

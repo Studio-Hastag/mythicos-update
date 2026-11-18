@@ -1,0 +1,40 @@
+#!/usr/bin/python3
+# MythicOS Update Manager - enable or disable automatic updates (root).
+# Usage: mythicos-update-automation enable|disable   (through pkexec)
+#
+# Derived from mintupdate (usr/bin/mintupdate-automation)
+# Copyright (C) 2007-2015 Clement Lefebvre <root@linuxmint.com>
+# Copyright (C) 2026 Studio Hastag <contact@hastag.fr>
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+FLAG = Path("/var/lib/mythicos-update/automatic-upgrades-enabled")
+TIMER = "mythicos-update-automation.timer"
+
+
+def main():
+    if os.getuid() != 0:
+        print("This command needs to be run as root.", file=sys.stderr)
+        return 2
+    if len(sys.argv) != 2 or sys.argv[1] not in ("enable", "disable"):
+        print("Usage: mythicos-update-automation enable|disable", file=sys.stderr)
+        return 14
+    if sys.argv[1] == "enable":
+        FLAG.parent.mkdir(parents=True, exist_ok=True)
+        FLAG.touch(exist_ok=True)
+        result = subprocess.run(["/bin/systemctl", "enable", "--now", TIMER])
+        if result.returncode != 0:
+            FLAG.unlink(missing_ok=True)
+            return result.returncode
+    else:
+        FLAG.unlink(missing_ok=True)
+        subprocess.run(["/bin/systemctl", "disable", "--now", TIMER])
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

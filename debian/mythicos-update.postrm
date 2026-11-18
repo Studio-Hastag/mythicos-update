@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "purge" ]; then
+    rm -rf /var/lib/mythicos-update
+    rm -f /var/log/mythicos-update.log* /var/log/mythicos-update-history.jsonl
+fi
+
+#DEBHELPER#

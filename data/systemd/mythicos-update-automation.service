@@ -1,0 +1,11 @@
+[Unit]
+Description=MythicOS Update Manager automatic updates
+After=network-online.target
+ConditionPathExists=/var/lib/mythicos-update/automatic-upgrades-enabled
+
+[Service]
+Type=oneshot
+CPUQuota=50%
+CPUWeight=20
+IOWeight=20
+ExecStart=/usr/bin/systemd-inhibit --why="Performing automatic updates" --who="Update Manager" --what=shutdown --mode=block /usr/lib/mythicos-update/automatic-upgrade.py

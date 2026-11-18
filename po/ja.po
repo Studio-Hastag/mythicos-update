@@ -1,0 +1,384 @@
+# Japanese translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+# Strings shared with mintupdate keep the translations of the Linux Mint translators (credits above); the other strings were translated by Claude (Anthropic) for Studio Hastag.
+msgid ""
+msgstr ""
+"Project-Id-Version: mythicos-update\n"
+"Report-Msgid-Bugs-To: contact@hastag.fr\n"
+"POT-Creation-Date: 2026-11-14 21:13+0100\n"
+"PO-Revision-Date: 2026-11-15 12:00+0000\n"
+"Last-Translator: kmyyfz8q <Unknown>\n"
+"Language-Team: Japanese <https://launchpad.net/~linuxmint-translation-team-japanese>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/mythicosupdate/desktop_strings.py:9 src/mythicosupdate/tray.py:42
+#: src/mythicosupdate/ui/app.py:21 src/mythicosupdate/ui/window.py:33
+#: src/mythicosupdate/ui/window.py:193
+msgid "Update Manager"
+msgstr "アップデートマネージャー"
+
+#: src/mythicosupdate/desktop_strings.py:10
+msgid "Show and install available updates"
+msgstr "利用可能なアップデートを表示・インストールします"
+
+#: src/mythicosupdate/desktop_strings.py:11
+#: src/mythicosupdate/ui/window.py:413
+msgid "Authentication is required to install updates"
+msgstr "アップデートをインストールするには認証が必要です"
+
+#: src/mythicosupdate/desktop_strings.py:12
+msgid "Authentication is required to change the automatic updates setting"
+msgstr "自動アップデートの設定を変更するには認証が必要です"
+
+#: src/mythicosupdate/tray.py:43 src/mythicosupdate/ui/window.py:62
+msgid "Refresh"
+msgstr "再読み込み"
+
+#: src/mythicosupdate/tray.py:44
+msgid "Quit"
+msgstr "終了"
+
+#: src/mythicosupdate/tray.py:66 src/mythicosupdate/ui/window.py:110
+msgid "Checking for updates"
+msgstr "アップデートを確認しています"
+
+#: src/mythicosupdate/tray.py:67 src/mythicosupdate/ui/window.py:153
+msgid "Your system is up to date"
+msgstr "システムは最新です"
+
+#: src/mythicosupdate/tray.py:68 src/mythicosupdate/ui/window.py:119
+msgid "Updates are available"
+msgstr "アップデートが利用可能です"
+
+#: src/mythicosupdate/tray.py:69 src/mythicosupdate/ui/window.py:138
+#: src/mythicosupdate/ui/window.py:418 src/mythicosupdate/ui/window.py:460
+msgid "Installing updates"
+msgstr "アップデートをインストールしています"
+
+#: src/mythicosupdate/tray.py:70 src/mythicosupdate/ui/window.py:245
+#: src/mythicosupdate/ui/window.py:249
+msgid "Could not refresh the list of updates"
+msgstr "アップデートの一覧を再読み込みできませんでした"
+
+#: src/mythicosupdate/ui/details.py:39 src/mythicosupdate/ui/window.py:117
+#: src/mythicosupdate/ui/window.py:172
+msgid "Details"
+msgstr "詳細"
+
+#: src/mythicosupdate/ui/details.py:51
+msgid "Security updates"
+msgstr "セキュリティアップデート"
+
+#: src/mythicosupdate/ui/details.py:51
+msgid "Kernel updates"
+msgstr "カーネルのアップデート"
+
+#: src/mythicosupdate/ui/details.py:52
+#: src/mythicosupdate/ui/history_window.py:44
+#: src/mythicosupdate/ui/history_window.py:45
+msgid "Software updates"
+msgstr "ソフトウェアアップデート"
+
+#: src/mythicosupdate/ui/details.py:61
+msgid "New packages"
+msgstr "新しいパッケージ"
+
+#: src/mythicosupdate/ui/details.py:65
+msgid "Packages to remove"
+msgstr "削除するパッケージ"
+
+#: src/mythicosupdate/ui/details.py:69
+msgid "Packages kept back"
+msgstr "保留されたパッケージ"
+
+#: src/mythicosupdate/ui/details.py:70
+msgid "Marked as held (apt-mark hold)"
+msgstr "保留としてマーク済み (apt-mark hold)"
+
+#: src/mythicosupdate/ui/details.py:71
+msgid "Phased update, rolled out gradually"
+msgstr "段階的アップデート、順次展開されています"
+
+#: src/mythicosupdate/ui/details.py:72
+msgid "Kept back by APT"
+msgstr "APT により保留"
+
+#: src/mythicosupdate/ui/details.py:78 src/mythicosupdate/ui/window.py:252
+msgid "Broken packages"
+msgstr "壊れたパッケージ"
+
+#: src/mythicosupdate/ui/details.py:79
+msgid "APT could not find a consistent set of changes"
+msgstr "APT は整合性のある変更の組み合わせを見つけられませんでした"
+
+#: src/mythicosupdate/ui/details.py:81
+#: src/mythicosupdate/ui/history_window.py:44
+#: src/mythicosupdate/ui/window.py:461
+msgid "Flatpak updates"
+msgstr "Flatpak のアップデート"
+
+#: src/mythicosupdate/ui/history_window.py:20
+#: src/mythicosupdate/ui/window.py:63
+msgid "History of Updates"
+msgstr "アップデートの履歴"
+
+#: src/mythicosupdate/ui/history_window.py:31
+msgid "No updates have been installed yet"
+msgstr "まだアップデートはインストールされていません"
+
+#: src/mythicosupdate/ui/history_window.py:45
+msgid "Automatic updates"
+msgstr "自動アップデート"
+
+#: src/mythicosupdate/ui/history_window.py:53
+msgid "Failed"
+msgstr "失敗"
+
+#: src/mythicosupdate/ui/preferences.py:25 src/mythicosupdate/ui/window.py:64
+msgid "Preferences"
+msgstr "設定"
+
+#: src/mythicosupdate/ui/preferences.py:30
+msgid "Automation"
+msgstr "自動化"
+
+#: src/mythicosupdate/ui/preferences.py:32
+msgid "Apply updates automatically"
+msgstr "アップデートを自動的に適用"
+
+#: src/mythicosupdate/ui/preferences.py:33
+msgid "Performed as root on a daily basis"
+msgstr "root 権限で日次実行されます"
+
+#: src/mythicosupdate/ui/preferences.py:38
+msgid "Auto-refresh"
+msgstr "自動での再読み込み"
+
+#: src/mythicosupdate/ui/preferences.py:40
+msgid "First, refresh the list of updates after:"
+msgstr "1 度目のアップデート一覧を再読み込みする時間:"
+
+#: src/mythicosupdate/ui/preferences.py:42
+msgid "Then, refresh the list of updates every:"
+msgstr "2 度目以降のアップデート一覧を再読み込みする間隔:"
+
+#: src/mythicosupdate/ui/preferences.py:50
+msgid "minutes"
+msgstr "分"
+
+#: src/mythicosupdate/ui/preferences.py:80
+msgid "Could not change the automatic updates setting."
+msgstr "自動アップデートの設定を変更できませんでした。"
+
+#: src/mythicosupdate/ui/window.py:65
+msgid "About"
+msgstr "このアプリケーションについて"
+
+#: src/mythicosupdate/ui/window.py:115
+msgid "Install"
+msgstr "インストール"
+
+#. up to date
+#. new MythicOS version
+#: src/mythicosupdate/ui/window.py:116 src/mythicosupdate/ui/window.py:149
+#: src/mythicosupdate/ui/window.py:158
+msgid "Settings"
+msgstr "設定"
+
+#: src/mythicosupdate/ui/window.py:120 src/mythicosupdate/ui/window.py:280
+msgid "Updates are available. Do you want to install them?"
+msgstr "アップデートがあります。インストールしますか？"
+
+#: src/mythicosupdate/ui/window.py:121 src/mythicosupdate/ui/window.py:146
+#: src/mythicosupdate/ui/window.py:163
+msgid "Later"
+msgstr "後で"
+
+#: src/mythicosupdate/ui/window.py:132
+msgid "Terminal"
+msgstr "端末"
+
+#: src/mythicosupdate/ui/window.py:143
+msgid "Restart required"
+msgstr "再起動が必要です"
+
+#: src/mythicosupdate/ui/window.py:144
+msgid "A restart is needed to finish applying the updates."
+msgstr "アップデートの適用を完了するには再起動が必要です。"
+
+#: src/mythicosupdate/ui/window.py:145
+msgid "Restart"
+msgstr "再起動"
+
+#: src/mythicosupdate/ui/window.py:154 src/mythicosupdate/ui/window.py:176
+#: src/mythicosupdate/ui/window.py:184
+msgid "Close"
+msgstr "閉じる"
+
+#: src/mythicosupdate/ui/window.py:160
+msgid "A new version of MythicOS is available"
+msgstr "MythicOS の新しいバージョンがあります"
+
+#: src/mythicosupdate/ui/window.py:161 src/mythicosupdate/ui/window.py:303
+msgid ""
+"Your software is up to date, but a new version of MythicOS is available. Do "
+"you want to install it?"
+msgstr "ソフトウェアは最新ですが、MythicOS の新しいバージョンがあります。インストールしますか？"
+
+#: src/mythicosupdate/ui/window.py:164
+msgid "Upgrade"
+msgstr "アップグレード"
+
+#: src/mythicosupdate/ui/window.py:174
+msgid "Retry"
+msgstr "再試行"
+
+#: src/mythicosupdate/ui/window.py:181 src/mythicosupdate/ui/window.py:257
+msgid "A previous installation was interrupted"
+msgstr "前回のインストールが中断されました"
+
+#: src/mythicosupdate/ui/window.py:182
+msgid "The package system must be repaired before anything new is installed."
+msgstr "新しいものをインストールする前に、パッケージシステムを修復する必要があります。"
+
+#: src/mythicosupdate/ui/window.py:183
+msgid "Repair"
+msgstr "修復"
+
+#: src/mythicosupdate/ui/window.py:202
+msgid "Please wait until the installation has finished."
+msgstr "インストールが完了するまでお待ちください。"
+
+#: src/mythicosupdate/ui/window.py:240 src/mythicosupdate/ui/window.py:372
+#: src/mythicosupdate/ui/window.py:516 src/mythicosupdate/ui/window.py:562
+msgid "Cannot Proceed"
+msgstr "続行できません"
+
+#: src/mythicosupdate/ui/window.py:241 src/mythicosupdate/ui/window.py:373
+#: src/mythicosupdate/ui/window.py:517 src/mythicosupdate/ui/window.py:563
+msgid ""
+"Another process is currently using the package management system. Please "
+"wait for it to finish and then try again."
+msgstr "現在、別のプロセスがパッケージ管理システムを使用しています。終了するまで待ってから、もう一度試してください。"
+
+#: src/mythicosupdate/ui/window.py:246
+msgid "Check your Internet connection and try again."
+msgstr "インターネット接続を確認して、もう一度お試しください。"
+
+#: src/mythicosupdate/ui/window.py:253
+msgid "APT could not find a consistent set of changes. Nothing was installed."
+msgstr "APT は整合性のある変更の組み合わせを見つけられませんでした。何もインストールされていません。"
+
+#: src/mythicosupdate/ui/window.py:266
+msgid "Could not check for Flatpak updates"
+msgstr "Flatpak のアップデートを確認できませんでした"
+
+#: src/mythicosupdate/ui/window.py:277
+msgid "A new version of the Update Manager is available"
+msgstr "アップデートマネージャー自体に新しいバージョンがあります"
+
+#: src/mythicosupdate/ui/window.py:278
+msgid "It will be installed first, then the other updates."
+msgstr "これが最初にインストールされ、その後で他のアップデートがインストールされます。"
+
+#: src/mythicosupdate/ui/window.py:281
+msgid "Updates to install: %d"
+msgstr "インストールするアップデート: %d"
+
+#: src/mythicosupdate/ui/window.py:284
+msgid "Download size: %s"
+msgstr "ダウンロードサイズ: %s"
+
+#: src/mythicosupdate/ui/window.py:286
+msgid "Packages to remove: %d"
+msgstr "削除するパッケージ: %d"
+
+#: src/mythicosupdate/ui/window.py:288
+msgid "Packages kept back: %d"
+msgstr "保留されたパッケージ: %d"
+
+#: src/mythicosupdate/ui/window.py:292 src/mythicosupdate/ui/window.py:316
+msgid "Software Sources is not installed."
+msgstr "ソフトウェアソースがインストールされていません。"
+
+#: src/mythicosupdate/ui/window.py:294
+msgid "Error checking for flatpak updates: %s"
+msgstr "Flatpak のアップデートを確認中にエラーがありました: %s"
+
+#: src/mythicosupdate/ui/window.py:313
+msgid "Could not read %s"
+msgstr "%s を読み込めませんでした"
+
+#: src/mythicosupdate/ui/window.py:333
+msgid "Could not start Software Sources."
+msgstr "ソフトウェアソースを起動できませんでした。"
+
+#: src/mythicosupdate/ui/window.py:346
+msgid "The program %s is not installed."
+msgstr "プログラム %s がインストールされていません。"
+
+#: src/mythicosupdate/ui/window.py:352
+msgid "Could not start the upgrade."
+msgstr "アップグレードを開始できませんでした。"
+
+#: src/mythicosupdate/ui/window.py:379 src/mythicosupdate/ui/window.py:521
+msgid "Not enough free disk space"
+msgstr "ディスクの空き容量が不足しています"
+
+#: src/mythicosupdate/ui/window.py:380 src/mythicosupdate/ui/window.py:522
+msgid "%s more free space is needed to install the updates."
+msgstr "アップデートをインストールするには、さらに %s の空き容量が必要です。"
+
+#: src/mythicosupdate/ui/window.py:388
+msgid "OK"
+msgstr "OK"
+
+#: src/mythicosupdate/ui/window.py:459
+msgid "Repairing the package system"
+msgstr "パッケージシステムを修復しています"
+
+#: src/mythicosupdate/ui/window.py:511
+msgid "Authentication failed"
+msgstr "認証に失敗しました"
+
+#: src/mythicosupdate/ui/window.py:512
+msgid "You are not allowed to install updates, or the password was refused."
+msgstr "アップデートをインストールする権限がないか、パスワードが拒否されました。"
+
+#: src/mythicosupdate/ui/window.py:525
+msgid "The list of updates has changed"
+msgstr "アップデートの一覧が変更されました"
+
+#: src/mythicosupdate/ui/window.py:526
+msgid ""
+"The changes APT would make differ from what was shown. Nothing was "
+"installed."
+msgstr "APT が行う変更は、表示された内容と異なります。何もインストールされていません。"
+
+#: src/mythicosupdate/ui/window.py:529
+msgid "Could not repair the package system"
+msgstr "パッケージシステムを修復できませんでした"
+
+#: src/mythicosupdate/ui/window.py:530
+msgid "Run 'apt update' in a terminal window to address this"
+msgstr "これに対処するには、端末で 'apt update' を実行します"
+
+#. The APT step already succeeded: say so separately.
+#: src/mythicosupdate/ui/window.py:533
+msgid "Could not update the Flatpaks"
+msgstr "Flatpak を更新できませんでした"
+
+#: src/mythicosupdate/ui/window.py:534
+msgid "The system updates were installed, but the Flatpak updates failed."
+msgstr "システムのアップデートはインストールされましたが、Flatpak のアップデートに失敗しました。"
+
+#: src/mythicosupdate/ui/window.py:537
+msgid "Could not install the updates"
+msgstr "アップデートをインストールできませんでした"

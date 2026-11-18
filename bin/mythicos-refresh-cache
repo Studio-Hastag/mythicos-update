@@ -1,0 +1,37 @@
+#!/usr/bin/python3
+# MythicOS Update Manager - refresh the APT package lists (root).
+# Called without a password through a sudoers rule; it takes no argument.
+#
+# Derived from mintupdate (usr/bin/mint-refresh-cache)
+# Copyright (C) 2007-2015 Clement Lefebvre <root@linuxmint.com>
+# Copyright (C) 2026 Studio Hastag <contact@hastag.fr>
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+import os
+import sys
+
+sys.path = [p for p in sys.path if p not in ("", ".")]
+sys.path.insert(0, "/usr/lib/mythicos-update")
+
+EXIT_OK, EXIT_FAILED, EXIT_NOT_ROOT, EXIT_LOCKED = 0, 1, 2, 10
+
+
+def main():
+    if os.getuid() != 0:
+        print("Error: mythicos-refresh-cache requires admin privileges", file=sys.stderr)
+        return EXIT_NOT_ROOT
+    from mythicosupdate import rootops
+    try:
+        warnings = rootops.refresh_package_lists()
+    except rootops.OperationError as error:
+        print("Could not update the package lists: %s" % error.details.get("detail", error.event),
+              file=sys.stderr)
+        return error.code
+    # Some repositories failed but the others are fresh: success, with a note.
+    for warning in warnings:
+        print("mythicos-refresh-cache: ignored failure: %s" % warning, file=sys.stderr)
+    return EXIT_OK
+
+
+if __name__ == "__main__":
+    sys.exit(main())

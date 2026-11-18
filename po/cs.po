@@ -1,0 +1,391 @@
+# Czech translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+# Strings shared with mintupdate keep the translations of the Linux Mint translators (credits above); the other strings were translated by Claude (Anthropic) for Studio Hastag.
+msgid ""
+msgstr ""
+"Project-Id-Version: mythicos-update\n"
+"Report-Msgid-Bugs-To: contact@hastag.fr\n"
+"POT-Creation-Date: 2026-11-14 21:13+0100\n"
+"PO-Revision-Date: 2026-11-15 12:00+0000\n"
+"Last-Translator: Marek Hladík <mhladik@seznam.cz>\n"
+"Language-Team: Czech <cs@li.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: src/mythicosupdate/desktop_strings.py:9 src/mythicosupdate/tray.py:42
+#: src/mythicosupdate/ui/app.py:21 src/mythicosupdate/ui/window.py:33
+#: src/mythicosupdate/ui/window.py:193
+msgid "Update Manager"
+msgstr "Správa aktualizací"
+
+#: src/mythicosupdate/desktop_strings.py:10
+msgid "Show and install available updates"
+msgstr "Zobrazit a nainstalovat dostupné aktualizace"
+
+#: src/mythicosupdate/desktop_strings.py:11
+#: src/mythicosupdate/ui/window.py:413
+msgid "Authentication is required to install updates"
+msgstr "Pro instalaci aktualizací je vyžadováno ověření"
+
+#: src/mythicosupdate/desktop_strings.py:12
+msgid "Authentication is required to change the automatic updates setting"
+msgstr "Pro změnu nastavení automatických aktualizací je vyžadováno ověření"
+
+#: src/mythicosupdate/tray.py:43 src/mythicosupdate/ui/window.py:62
+msgid "Refresh"
+msgstr "Obnovit"
+
+#: src/mythicosupdate/tray.py:44
+msgid "Quit"
+msgstr "Ukončit"
+
+#: src/mythicosupdate/tray.py:66 src/mythicosupdate/ui/window.py:110
+msgid "Checking for updates"
+msgstr "Kontrola aktualizací"
+
+#: src/mythicosupdate/tray.py:67 src/mythicosupdate/ui/window.py:153
+msgid "Your system is up to date"
+msgstr "Váš systém je aktuální"
+
+#: src/mythicosupdate/tray.py:68 src/mythicosupdate/ui/window.py:119
+msgid "Updates are available"
+msgstr "Jsou k dispozici aktualizace"
+
+#: src/mythicosupdate/tray.py:69 src/mythicosupdate/ui/window.py:138
+#: src/mythicosupdate/ui/window.py:418 src/mythicosupdate/ui/window.py:460
+msgid "Installing updates"
+msgstr "Instalace aktualizací"
+
+#: src/mythicosupdate/tray.py:70 src/mythicosupdate/ui/window.py:245
+#: src/mythicosupdate/ui/window.py:249
+msgid "Could not refresh the list of updates"
+msgstr "Nedaří se znovu načíst seznam aktualizací"
+
+#: src/mythicosupdate/ui/details.py:39 src/mythicosupdate/ui/window.py:117
+#: src/mythicosupdate/ui/window.py:172
+msgid "Details"
+msgstr "Podrobnosti"
+
+#: src/mythicosupdate/ui/details.py:51
+msgid "Security updates"
+msgstr "Aktualizace zabezpečení"
+
+#: src/mythicosupdate/ui/details.py:51
+msgid "Kernel updates"
+msgstr "Aktualizace jádra"
+
+#: src/mythicosupdate/ui/details.py:52
+#: src/mythicosupdate/ui/history_window.py:44
+#: src/mythicosupdate/ui/history_window.py:45
+msgid "Software updates"
+msgstr "Aktualizace software"
+
+#: src/mythicosupdate/ui/details.py:61
+msgid "New packages"
+msgstr "Nové balíčky"
+
+#: src/mythicosupdate/ui/details.py:65
+msgid "Packages to remove"
+msgstr "Balíčky k odstranění"
+
+#: src/mythicosupdate/ui/details.py:69
+msgid "Packages kept back"
+msgstr "Zadržené balíčky"
+
+#: src/mythicosupdate/ui/details.py:70
+msgid "Marked as held (apt-mark hold)"
+msgstr "Označeno jako zadržené (apt-mark hold)"
+
+#: src/mythicosupdate/ui/details.py:71
+msgid "Phased update, rolled out gradually"
+msgstr "Postupná aktualizace, vydávaná po částech"
+
+#: src/mythicosupdate/ui/details.py:72
+msgid "Kept back by APT"
+msgstr "Zadrženo nástrojem APT"
+
+#: src/mythicosupdate/ui/details.py:78 src/mythicosupdate/ui/window.py:252
+msgid "Broken packages"
+msgstr "Poškozené balíčky"
+
+#: src/mythicosupdate/ui/details.py:79
+msgid "APT could not find a consistent set of changes"
+msgstr "APT nenašel konzistentní sadu změn"
+
+#: src/mythicosupdate/ui/details.py:81
+#: src/mythicosupdate/ui/history_window.py:44
+#: src/mythicosupdate/ui/window.py:461
+msgid "Flatpak updates"
+msgstr "Aktualizace flatpak balíčků"
+
+#: src/mythicosupdate/ui/history_window.py:20
+#: src/mythicosupdate/ui/window.py:63
+msgid "History of Updates"
+msgstr "Historie aktualizací"
+
+#: src/mythicosupdate/ui/history_window.py:31
+msgid "No updates have been installed yet"
+msgstr "Zatím nebyly nainstalovány žádné aktualizace"
+
+#: src/mythicosupdate/ui/history_window.py:45
+msgid "Automatic updates"
+msgstr "Automatické aktualizace"
+
+#: src/mythicosupdate/ui/history_window.py:53
+msgid "Failed"
+msgstr "Selhalo"
+
+#: src/mythicosupdate/ui/preferences.py:25 src/mythicosupdate/ui/window.py:64
+msgid "Preferences"
+msgstr "Předvolby"
+
+#: src/mythicosupdate/ui/preferences.py:30
+msgid "Automation"
+msgstr "Automatizace"
+
+#: src/mythicosupdate/ui/preferences.py:32
+msgid "Apply updates automatically"
+msgstr "Instalovat aktualizace automaticky"
+
+#: src/mythicosupdate/ui/preferences.py:33
+msgid "Performed as root on a daily basis"
+msgstr "Prováděno každý den, pod účtem správce (root)"
+
+#: src/mythicosupdate/ui/preferences.py:38
+msgid "Auto-refresh"
+msgstr "Automatické obnovování"
+
+#: src/mythicosupdate/ui/preferences.py:40
+msgid "First, refresh the list of updates after:"
+msgstr "Po spuštění obnovit seznam aktualizací po uplynutí:"
+
+#: src/mythicosupdate/ui/preferences.py:42
+msgid "Then, refresh the list of updates every:"
+msgstr "Poté obnovovat seznam aktualizací každých:"
+
+#: src/mythicosupdate/ui/preferences.py:50
+msgid "minutes"
+msgstr "minut"
+
+#: src/mythicosupdate/ui/preferences.py:80
+msgid "Could not change the automatic updates setting."
+msgstr "Nastavení automatických aktualizací se nepodařilo změnit."
+
+#: src/mythicosupdate/ui/window.py:65
+msgid "About"
+msgstr "O aplikaci"
+
+#: src/mythicosupdate/ui/window.py:115
+msgid "Install"
+msgstr "Nainstalovat"
+
+#. up to date
+#. new MythicOS version
+#: src/mythicosupdate/ui/window.py:116 src/mythicosupdate/ui/window.py:149
+#: src/mythicosupdate/ui/window.py:158
+msgid "Settings"
+msgstr "Nastavení"
+
+#: src/mythicosupdate/ui/window.py:120 src/mythicosupdate/ui/window.py:280
+msgid "Updates are available. Do you want to install them?"
+msgstr "Jsou k dispozici aktualizace. Chcete je nainstalovat?"
+
+#: src/mythicosupdate/ui/window.py:121 src/mythicosupdate/ui/window.py:146
+#: src/mythicosupdate/ui/window.py:163
+msgid "Later"
+msgstr "Později"
+
+#: src/mythicosupdate/ui/window.py:132
+msgid "Terminal"
+msgstr "Terminál"
+
+#: src/mythicosupdate/ui/window.py:143
+msgid "Restart required"
+msgstr "Vyžadován restart"
+
+#: src/mythicosupdate/ui/window.py:144
+msgid "A restart is needed to finish applying the updates."
+msgstr "K dokončení aplikace aktualizací je nutný restart."
+
+#: src/mythicosupdate/ui/window.py:145
+msgid "Restart"
+msgstr "Restartovat"
+
+#: src/mythicosupdate/ui/window.py:154 src/mythicosupdate/ui/window.py:176
+#: src/mythicosupdate/ui/window.py:184
+msgid "Close"
+msgstr "Zavřít"
+
+#: src/mythicosupdate/ui/window.py:160
+msgid "A new version of MythicOS is available"
+msgstr "Je k dispozici nová verze MythicOS"
+
+#: src/mythicosupdate/ui/window.py:161 src/mythicosupdate/ui/window.py:303
+msgid ""
+"Your software is up to date, but a new version of MythicOS is available. Do "
+"you want to install it?"
+msgstr ""
+"Váš software je aktuální, ale je k dispozici nová verze MythicOS. Chcete ji "
+"nainstalovat?"
+
+#: src/mythicosupdate/ui/window.py:164
+msgid "Upgrade"
+msgstr "Přejít na novější verzi"
+
+#: src/mythicosupdate/ui/window.py:174
+msgid "Retry"
+msgstr "Zkusit znovu"
+
+#: src/mythicosupdate/ui/window.py:181 src/mythicosupdate/ui/window.py:257
+msgid "A previous installation was interrupted"
+msgstr "Předchozí instalace byla přerušena"
+
+#: src/mythicosupdate/ui/window.py:182
+msgid "The package system must be repaired before anything new is installed."
+msgstr "Před instalací čehokoli nového je nutné opravit systém balíčků."
+
+#: src/mythicosupdate/ui/window.py:183
+msgid "Repair"
+msgstr "Opravit"
+
+#: src/mythicosupdate/ui/window.py:202
+msgid "Please wait until the installation has finished."
+msgstr "Počkejte prosím, dokud instalace neskončí."
+
+#: src/mythicosupdate/ui/window.py:240 src/mythicosupdate/ui/window.py:372
+#: src/mythicosupdate/ui/window.py:516 src/mythicosupdate/ui/window.py:562
+msgid "Cannot Proceed"
+msgstr "Nelze pokračovat"
+
+#: src/mythicosupdate/ui/window.py:241 src/mythicosupdate/ui/window.py:373
+#: src/mythicosupdate/ui/window.py:517 src/mythicosupdate/ui/window.py:563
+msgid ""
+"Another process is currently using the package management system. Please "
+"wait for it to finish and then try again."
+msgstr ""
+"Systém správy balíčků je nyní využíván jiným procesem. Vyčkejte než bude "
+"dokončeno a zkuste to znovu."
+
+#: src/mythicosupdate/ui/window.py:246
+msgid "Check your Internet connection and try again."
+msgstr "Zkontrolujte připojení k internetu a zkuste to znovu."
+
+#: src/mythicosupdate/ui/window.py:253
+msgid "APT could not find a consistent set of changes. Nothing was installed."
+msgstr "APT nenašel konzistentní sadu změn. Nic nebylo nainstalováno."
+
+#: src/mythicosupdate/ui/window.py:266
+msgid "Could not check for Flatpak updates"
+msgstr "Nepodařilo se zkontrolovat aktualizace Flatpak"
+
+#: src/mythicosupdate/ui/window.py:277
+msgid "A new version of the Update Manager is available"
+msgstr "Je k dispozici nová verze Správy aktualizací"
+
+#: src/mythicosupdate/ui/window.py:278
+msgid "It will be installed first, then the other updates."
+msgstr "Nainstaluje se jako první, poté ostatní aktualizace."
+
+#: src/mythicosupdate/ui/window.py:281
+msgid "Updates to install: %d"
+msgstr "Aktualizací k instalaci: %d"
+
+#: src/mythicosupdate/ui/window.py:284
+msgid "Download size: %s"
+msgstr "Velikost stahování: %s"
+
+#: src/mythicosupdate/ui/window.py:286
+msgid "Packages to remove: %d"
+msgstr "Balíčků k odstranění: %d"
+
+#: src/mythicosupdate/ui/window.py:288
+msgid "Packages kept back: %d"
+msgstr "Zadržených balíčků: %d"
+
+#: src/mythicosupdate/ui/window.py:292 src/mythicosupdate/ui/window.py:316
+msgid "Software Sources is not installed."
+msgstr "Zdroje softwaru nejsou nainstalovány."
+
+#: src/mythicosupdate/ui/window.py:294
+msgid "Error checking for flatpak updates: %s"
+msgstr "Chyba při kontrole aktualizací Flatpak: %s"
+
+#: src/mythicosupdate/ui/window.py:313
+msgid "Could not read %s"
+msgstr "Nepodařilo se přečíst %s"
+
+#: src/mythicosupdate/ui/window.py:333
+msgid "Could not start Software Sources."
+msgstr "Nepodařilo se spustit Zdroje softwaru."
+
+#: src/mythicosupdate/ui/window.py:346
+msgid "The program %s is not installed."
+msgstr "Program %s není nainstalován."
+
+#: src/mythicosupdate/ui/window.py:352
+msgid "Could not start the upgrade."
+msgstr "Nepodařilo se spustit upgrade systému."
+
+#: src/mythicosupdate/ui/window.py:379 src/mythicosupdate/ui/window.py:521
+msgid "Not enough free disk space"
+msgstr "Nedostatek volného místa na disku"
+
+#: src/mythicosupdate/ui/window.py:380 src/mythicosupdate/ui/window.py:522
+msgid "%s more free space is needed to install the updates."
+msgstr "K instalaci aktualizací je potřeba o %s více volného místa."
+
+#: src/mythicosupdate/ui/window.py:388
+msgid "OK"
+msgstr "OK"
+
+#: src/mythicosupdate/ui/window.py:459
+msgid "Repairing the package system"
+msgstr "Probíhá oprava systému balíčků"
+
+#: src/mythicosupdate/ui/window.py:511
+msgid "Authentication failed"
+msgstr "Ověření selhalo"
+
+#: src/mythicosupdate/ui/window.py:512
+msgid "You are not allowed to install updates, or the password was refused."
+msgstr "Nemáte oprávnění instalovat aktualizace, nebo bylo heslo odmítnuto."
+
+#: src/mythicosupdate/ui/window.py:525
+msgid "The list of updates has changed"
+msgstr "Seznam aktualizací se změnil"
+
+#: src/mythicosupdate/ui/window.py:526
+msgid ""
+"The changes APT would make differ from what was shown. Nothing was "
+"installed."
+msgstr ""
+"Změny, které by APT provedl, se liší od zobrazených. Nic nebylo "
+"nainstalováno."
+
+#: src/mythicosupdate/ui/window.py:529
+msgid "Could not repair the package system"
+msgstr "Nepodařilo se opravit systém balíčků"
+
+#: src/mythicosupdate/ui/window.py:530
+msgid "Run 'apt update' in a terminal window to address this"
+msgstr "Napravte to spuštěním příkazu „apt update“ v terminálovém okně"
+
+#. The APT step already succeeded: say so separately.
+#: src/mythicosupdate/ui/window.py:533
+msgid "Could not update the Flatpaks"
+msgstr "Nepodařilo se aktualizovat balíčky Flatpak"
+
+#: src/mythicosupdate/ui/window.py:534
+msgid "The system updates were installed, but the Flatpak updates failed."
+msgstr ""
+"Systémové aktualizace byly nainstalovány, ale aktualizace Flatpak selhaly."
+
+#: src/mythicosupdate/ui/window.py:537
+msgid "Could not install the updates"
+msgstr "Nepodařilo se nainstalovat aktualizace"

@@ -1,0 +1,70 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: mythicos-update
+Upstream-Contact: Studio Hastag <contact@hastag.fr>
+Source: https://github.com/Studio-Hastag/mythicos-update
+Comment: The MythicOS Update Manager reuses code from the Linux Mint
+ Update Manager (mintupdate, GPL-3+) and from the Ubuntu Update Manager
+ (update-manager, GPL-2+). Each reused file keeps its original notice,
+ with a Studio Hastag line added.
+
+Files: *
+Copyright: 2026 Studio Hastag <contact@hastag.fr>
+License: GPL-3+
+
+Files: src/mythicosupdate/updates.py
+ src/mythicosupdate/locks.py
+ src/mythicosupdate/release.py
+ src/mythicosupdate/power.py
+ src/mythicosupdate/session.py
+ src/mythicosupdate/tray.py
+ src/mythicosupdate/ui/window.py
+ bin/mythicos-update
+ bin/mythicos-refresh-cache
+ bin/mythicos-update-automation
+ data/lib/lock-check.sh
+ data/lib/automatic-upgrade.py
+ data/sudoers/mythicos-update
+ data/logrotate/mythicos-update
+ data/systemd/*
+Copyright: 2007-2015 Clement Lefebvre <root@linuxmint.com>
+ 2026 Studio Hastag <contact@hastag.fr>
+Comment: Derived from mintupdate (https://github.com/linuxmint/mintupdate).
+ Other contributors are listed in the changelog of mintupdate.
+License: GPL-3+
+
+Files: src/mythicosupdate/aptcheck.py
+Copyright: 2007-2015 Clement Lefebvre <root@linuxmint.com>
+ 2004-2013 Canonical Ltd and the update-manager authors
+ 2026 Studio Hastag <contact@hastag.fr>
+Comment: Derived from mintupdate (aptUpdater.py, GPL-3+) and from Ubuntu
+ update-manager (UpdateList.py and MyCache.py, GPL-2+ with "or later").
+ Nothing related to Ubuntu Pro, snapd or aptdaemon is used.
+License: GPL-3+
+
+Files: po/*.po
+Copyright: Linux Mint translators (strings shared with mintupdate, through Launchpad)
+ 2026 Studio Hastag, translated by Claude (Anthropic), for the other strings
+License: GPL-3+
+
+Files: data/icons/*
+Copyright: 2026 Studio Hastag <contact@hastag.fr>
+License: GPL-3+
+Comment: Original artwork. The status icons of mintupdate come from the
+ "Moka Symbolic Icon Theme" and are deliberately not reused.
+
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or (at
+ your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ version 3 can be found in "/usr/share/common-licenses/GPL-3".

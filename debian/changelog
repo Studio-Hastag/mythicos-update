@@ -1,0 +1,66 @@
+mythicos-update (1.0.6) aurora; urgency=medium
+
+  * Right after the login another process often holds the APT lock (system
+    services, the tray icon's own first check). The package lists refresh now
+    waits and retries for about a minute instead of failing at once, the tray
+    icon and the window take turns instead of colliding, and the tray icon
+    treats a busy package manager as "try again later", not as an error.
+    The message names the process holding the lock.
+
+ -- Studio Hastag <contact@hastag.fr>  Wed, 18 Nov 2026 14:50:00 +0100
+
+mythicos-update (1.0.5) aurora; urgency=high
+
+  * Fix: APT progress is no longer requested on fd 1 (APT::Status-Fd=1).
+    That made the maintainer scripts of some packages lose their standard
+    output and fail ("sed: couldn't close stdout: Bad file descriptor",
+    "echo: I/O error"), leaving the package half-configured. The progress is
+    now sent on a dedicated pipe, so the progress bar keeps working.
+
+ -- Studio Hastag <contact@hastag.fr>  Wed, 18 Nov 2026 14:30:00 +0100
+
+mythicos-update (1.0.4) aurora; urgency=medium
+
+  * History window: the package rows of an entry are now created only when it
+    is expanded, and at most 150 entries are listed. With a long APT history
+    the window used to freeze for a long time while building thousands of
+    rows. Errors while displaying the history are logged and shown in the
+    window instead of taking it down.
+
+ -- Studio Hastag <contact@hastag.fr>  Tue, 17 Nov 2026 21:05:00 +0100
+
+mythicos-update (1.0.3) aurora; urgency=medium
+
+  * Package list refresh: repository failures are listed once each (APT
+    reports the same item several times) and python-apt's raw warning dump
+    is no longer printed.
+
+ -- Studio Hastag <contact@hastag.fr>  Tue, 17 Nov 2026 20:55:00 +0100
+
+mythicos-update (1.0.2) aurora; urgency=medium
+
+  * Flatpak step: a download that prints nothing (large runtime, output not
+    on a terminal) is no longer mistaken for a stalled update. The stall
+    detection now looks at the read/write activity of the flatpak process
+    in addition to its output.
+
+ -- Studio Hastag <contact@hastag.fr>  Tue, 17 Nov 2026 20:45:00 +0100
+
+mythicos-update (1.0.1) aurora; urgency=medium
+
+  * Refreshing the package lists no longer fails when only some
+    repositories fail (e.g. a PPA answering 503): the failures are logged and
+    ignored. It still fails, with the per-repository details, when nothing
+    could be fetched. Same fix for the automatic updates.
+
+ -- Studio Hastag <contact@hastag.fr>  Tue, 17 Nov 2026 20:30:00 +0100
+
+mythicos-update (1.0.0) aurora; urgency=medium
+
+  * Initial release: GTK 4 / libadwaita window, separate XApp tray icon,
+    APT and Flatpak updates installed through pkexec, password-less refresh
+    through a sudoers rule, self-update first, interrupted-install repair,
+    update history, optional automatic updates (off by default),
+    MythicOS release upgrade detection through mythicos-upgrade-info.
+
+ -- Studio Hastag <contact@hastag.fr>  Sun, 15 Nov 2026 12:00:00 +0100

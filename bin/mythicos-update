@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+# MythicOS Update Manager - launcher
+#
+# Derived from mintupdate (usr/bin/mintupdate)
+# Copyright (C) 2007-2015 Clement Lefebvre <root@linuxmint.com>
+# Copyright (C) 2026 Studio Hastag <contact@hastag.fr>
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+import argparse
+import os
+import sys
+
+sys.path = [p for p in sys.path if p not in ("", ".")]
+sys.path.insert(0, "/usr/lib/mythicos-update")
+
+
+def main():
+    if os.getuid() == 0:
+        print("Error: do not run the Update Manager as root", file=sys.stderr)
+        return 1
+    parser = argparse.ArgumentParser(prog="mythicos-update", description="The MythicOS Update Manager")
+    from mythicosupdate import __version__
+    parser.add_argument("-v", "--version", action="version", version=__version__,
+                        help="Display the current version")
+    parser.parse_args()
+    from mythicosupdate.ui.app import main as run
+    return run()
+
+
+if __name__ == "__main__":
+    sys.exit(main())
